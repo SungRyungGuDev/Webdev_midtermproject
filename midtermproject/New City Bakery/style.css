@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&family=Syne+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap");
+
+main {
+  background-image: url(./image/back.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Prompt", sans-serif;
+  font-size: 20px;
+}
+
+.logo {
+  padding-bottom: 50px;
+}
+
+h1 {
+  color: #ffc89b;
+}
+
+.form-control {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.head {
+  font-size: 25px;
+  background-color: black;
+  color: #fdff9b;
+  text-shadow: #888888;
+  margin: 0%;
+  text-align: center;
+  font-family: "Syne Mono", monospace;
+}
+input:invalid {
+  border: red solid 2px;
+}
+
+.regform {
+  width: 800px;
+  background-color: rgb(0, 0, 0, 0.6);
+  margin: auto;
+  padding: 15px 0px 15px 0px;
+  text-align: center;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.row {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 600;
+  color: antiquewhite;
+}
+
+.container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#invoice {
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: azure;
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 8px #888888;
+  padding-bottom: 5px;
+}
+
+#invoice:empty {
+  display: none;
+}
+
+#btn-submit,
+#btn-clear {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: larger;
+  font-weight: 600;
+  width: 100px;
+  height: 50px;
+}
+
+footer {
+  background-color: rgb(51, 50, 50);
+  color: white;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding: 15px;
+  font-size: 16px;
+  text-align: right;
+}
+
+.footer_table td,
+th {
+  width: 50%;
+}
+
+.left_align {
+  text-align: left;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.center_align {
+  text-align: center;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.right_align {
+  text-align: right;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+#question {
+  font-family: "Sansita Swashed", cursive;
+  font-weight: 800;
+  font-size: 30px;
+  color: antiquewhite;
+}
+
+#answer,
+#CakeDimensions {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fdff9b;
+}

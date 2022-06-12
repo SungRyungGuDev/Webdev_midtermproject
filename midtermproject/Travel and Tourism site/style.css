@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Sansita+Swashed:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
+
+body {
+  font-family: "Prompt", sans-serif;
+  background-image: url(./image/background.jpg);
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  max-height: 600px;
+  border-radius: 15px;
+  border-style: double;
+  border-width: 30px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.caption {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Sansita Swashed", cursive;
+  color: #e29898;
+  height: min-content;
+  font-size: 70px;
+  text-shadow: 1px 1px 1px grey;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.img_header {
+  width: 100px;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+footer {
+  background-color: rgb(51, 50, 50);
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 0%;
+  padding: 15px;
+  font-size: 14px;
+  text-align: right;
+}
+
+.footer_table td,
+th {
+  width: 50%;
+}
+
+.left_align {
+  text-align: left;
+  padding-left: 100px;
+  padding-right: 120px;
+}
+
+.center_align {
+  text-align: center;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.right_align {
+  text-align: right;
+  padding-left: 120px;
+  padding-right: 120px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/6f5bed1d29.js" crossorigin="anonymous"></script>
+    <title>Currency Converter</title>
+</head>
+
+<body>
+    <div id="date"></div>
+    <div class="main">Welcome Currency Excange</div>
+
+    <form id="instruction">
+        <p><h2><i class="fa-solid fa-circle-question"></i>&nbsp;&nbsp; How to use</h2></p>
+        <p><h4><i class="fa-solid fa-1"></i>&nbsp; Select Currency on hand section</h4></p>
+        <p><h4><i class="fa-solid fa-2"></i>&nbsp; Input exchange amount</h4></p>
+        <p><h4><i class="fa-solid fa-3"></i>&nbsp; Select Section of Covert to</h4></p>
+        <p><h4><i class="fa-solid fa-4"></i>&nbsp; Confirm the result</h4></p>
+        <p><h4><i class="fa-solid fa-5"></i>&nbsp; Can print the result by changing the value of any section</h4></p>
+    </form>
+    <div class="container">
+
+        <form id="form" class="regform">
+            <table class="table">
+                <tr>
+                    <th class="thead" colspan="4">Currency Converter</th>
+                </tr>
+                <tr>
+                    <td class="tableTopic"><i class="fa-solid fa-wallet"></i>&nbsp; Currency on hand</td>
+                    <td class="tableTopic"><i class="fa-solid fa-caret-right"></i>&nbsp Currency exchange Amount
+                    </td>
+                </tr>
+                <tr>
+                    <td class="type">
+                        <select name="type" id="exchange" onchange="calculate()">
+                            <option value="">Select</option>
+                            <option value="1">Euro</option>
+                            <option value="2">US Dollar</option>
+                            <option value="3">Canadian Dollar</option>
+                            <option value="4">Bitcoin Digital Currency</option>
+                            <option value="5">Ethereum Digital Currency</option>
+                        </select>
+                    </td>
+                    <td class="amount"><input type="number" value="0" min="0" id="amount" name="amount_input" oninput="calculate()">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableTopic"><i class="fa-solid fa-caret-right"></i>&nbsp Excange amount Covert to
+                    </td>
+                    <td class="tableTopic"><i class="fa-solid fa-calculator"></i>&nbsp Conversion Value</td>
+                </tr>
+
+                <td class="convert">
+                    <select name="convert" id="convert" onchange="calculate()">
+                        <option value="">Select</option>
+                        <option value="1">Euro</option>
+                        <option value="2">US Dollar</option>
+                        <option value="3">Canadian Dollar</option>
+                        <option value="4">Bitcoin Digital Currency</option>
+                        <option value="5">Ethereum Digital Currency</option>
+                    </select>
+                </td>
+                <td>
+                    <div id="result"></div>
+                </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+
+    
+
+    <script src="./calculate.js"></script>
+</body>
+
+</html>

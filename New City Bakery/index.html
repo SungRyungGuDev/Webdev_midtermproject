@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/6f5bed1d29.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>New City Bakery</title>
+</head>
+
+<body>
+    <header>
+        <p class="head">Welcome to visit our Bakary Order Website!!&nbsp;&nbsp;&nbsp; Contact
+            us at
+            <strong>010-6213-2044</strong>,&nbsp; or at <strong>&nbsp;newcitybakeries@email.com</strong>
+        </p>
+    </header>
+
+    <main>
+        <div class="logo"><img src="./image/logo2.png" width="100%" alt="logo"></div>
+
+        <form id="form" class="regform" onsubmit="OrderCalculate(event)">
+            <div class="container">
+                <h1>Request Form for Custome Cake</h1><br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="first"><i class="fa-solid fa-user-large"></i>&nbsp; First name</label>
+                        <input type="text" class="form-control" id="first" placeholder="Joe" pattern="^[A-Za-z -]+$"
+                            required autofocus>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="last"><i class="fa-solid fa-user-large"></i>&nbsp; Last name</label>
+                        <input type="text" class="form-control" id="last" placeholder="Blow" pattern="^[A-Za-z -]+$"
+                            required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="address"><i class="fa-solid fa-location-dot"></i>&nbsp; Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="123Ave 456st SW" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="postal"><i class="fa-solid fa-map-location-dot"></i>&nbsp; Postal Code</label>
+                        <input type="text" class="form-control" id="postalcode"
+                            pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="A1B 2C3" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="email"><i class="fa-solid fa-envelope-open-text"></i>&nbsp; Email Address</label>
+                        <input type="email" class="form-control" id="email"
+                            pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" placeholder="ABC123@domain.com"
+                            required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone"><i class="fa-solid fa-square-phone"></i>&nbsp; Phone Number</label>
+                        <input type="text" class="form-control" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+                            placeholder="123-456-7890" required>
+                    </div>
+                </div>
+                <br><br>
+
+                <div id="CakeType">
+                    <label id="question" class="form-label required"><i class="fa-solid fa-cake-candles"></i>&nbsp;
+                        &nbsp; What shape would you like your cake to be?</label><br><br>
+                    <input type="radio" id="sheet" name="CakeType" value="Sheet" required onchange="CakeChoice(sheet)">
+                    <label id="answer" for="sheet">Sheet Cake</label>
+                    <input type="radio" id="round" name="CakeType" value="Round" required onchange="CakeChoice(round)">
+                    <label id="answer" for="round">Round Cake</label>
+                </div>
+                <div id="CakeDimensions"></div>
+                <br><br>
+
+                <div id="CakeLayers">
+                    <label id="question" class="form-label required"><i class="fa-solid fa-database"></i>&nbsp; &nbsp;
+                        How many layers for your cake?</label><br><br>
+                    <input type="radio" id="layer1" name="CakeLayers" value="1" required>
+                    <label id="answer" for="OneLayer">One Layer</label><br>
+                    <input type="radio" id="layer2" name="CakeLayers" value="2" required>
+                    <label id="answer" for="TwoLayers">Two Layers</label><br>
+                    <input type="radio" id="layer3" name="CakeLayers" value="3" required>
+                    <label id="answer" for="ThreeLayers">Three Layers</label><br>
+                </div>
+                <br><br>
+
+                <div id="AdditionalChoices">
+                    <label id="question"><i class="fa-solid fa-candy-cane"></i> &nbsp; &nbsp;Customize your own cake
+                        with additional options!</label><br><br>
+                    <input type="checkbox" id="Additional-CreamCheese" name="AdditionalChoice" value="5">
+                    <label id="answer" for="Additional-CreamCheese">Cream Cheese icing $5</label><br>
+                    <input type="checkbox" id="Additional-FruitAndAlmond" name="AdditionalChoice" value="7">
+                    <label id="answer" for="Additional-FruitAndAlmond">Fruit and Almond topping $7</label><br>
+                    <input type="checkbox" id="Additional-FruitJam" name="AdditionalChoice" value="4">
+                    <label id="answer" for="Additional-FruitJam">Fruit jam filling between layers $4</label><br>
+                </div>
+                <br><br>
+
+                <div id="button-area">
+                    <input type="submit" id="btn-submit" value="Submit">
+                    <input type="reset" id="btn-clear" value="Clear">
+                </div>
+            </div>
+        </form>
+        <br><br>
+        <div id="invoice"></div>
+    </main>
+
+    <footer>
+        <table>
+            <tr>
+                <td class="left_align"><i class="fa-solid fa-location-dot"></i>&nbsp; Location: 123st ABC Avenue,
+                    Calgary, AB, Canada A1B 2C3</td>
+                <td class="center_align"><i class="fa-solid fa-envelope-open-text"></i>&nbsp; E-mail:
+                    newcitybakeries@email.com</td>
+                <td class="right_align"><i class="fa-solid fa-square-phone"></i>&nbsp; Phone: 403-123-5678</td>
+            </tr>
+        </table>
+    </footer>
+    <script src="./calculate.js"></script>
+</body>
+
+</html>

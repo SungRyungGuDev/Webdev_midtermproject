@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Sansita+Swashed:wght@600&display=swap");
+
+body {
+  background-image: url(./image/back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+#date {
+  font-size: larger;
+  font-weight: 700;
+  color: #ff000d;
+}
+
+.main {
+  color: #34618b;
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  font-family: "Anton", sans-serif;
+}
+
+.regform {
+  width: 800px;
+  background-color: rgb(0, 0, 0, 0.5);
+  margin: auto;
+  color: #c8ff00;
+  padding: 15px 0px 70px 0px;
+  text-align: center;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.container {
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.table {
+  text-align: center;
+  width: 800px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: fit-content;
+}
+
+tr,
+td {
+  padding: 15px;
+  border-style: solid;
+}
+
+.thead {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+  font-family: "Sansita Swashed", cursive;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.tableTopic {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#exchange {
+  height: 30px;
+  font-size: 15px;
+}
+
+#convert {
+  height: 30px;
+  font-size: 15px;
+}
+
+#result {
+  font-size: 15px;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+}
+
+#instruction {
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: azure;
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 8px #888888;
+  padding-bottom: 5px;
+}
